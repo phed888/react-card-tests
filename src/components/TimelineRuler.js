@@ -35,18 +35,6 @@ const Ruler = styled.div`
 export default class TimelineRuler extends Component {
 
     createTicks = () => {
-        let outerTicks = []
-        for(let i = 0; i < 14; i++) {
-            let innerTicks = [];
-            for(let j = 0; j < 5; j++ ) {
-                innerTicks.push(<div className="innerTick"></div>)
-            }
-            outerTicks.push(<div className="outerTick">{innerTicks}</div>)
-        }
-        return outerTicks
-    }
-
-    createTicks2 = () => {
         let tenTicks = []
         for(let i = 0; i < 7; i++) {
             let fiveTicks = []
@@ -61,10 +49,11 @@ export default class TimelineRuler extends Component {
         }
         return tenTicks
     }
+
     render() {
         return (
         <Ruler>
-            {this.createTicks2()}
+            {this.createTicks()}
         </Ruler>
         )
     }

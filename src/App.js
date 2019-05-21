@@ -1,6 +1,7 @@
 import React from 'react';
 import TimelineRuler from './components/TimelineRuler'
 import { createGlobalStyle } from 'styled-components'
+import TimeLine from './components/Timeline'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -28,6 +29,7 @@ function App() {
       <GlobalStyle />
       <div className="App">
         <TimelineRuler />
+        <TimeLine />
       </div>
     </div>
   );
